@@ -1,48 +1,16 @@
-/*
-for(let i = 100; i >= 0; i--){
-    if(i%2 === 0){
-        document.write(i + ' ')
+//F(n) = F(n-1) + F(n-2)
+
+const lim = parseInt(prompt('enter limit'));
+
+function fibo(lim){
+    let a = 1;
+    let b = a;
+    let c;
+    for(let i = 1; i < lim; i++){
+        c = a;
+        a = a + b;
+        b = c;
     }
+    document.write(b)
 }
-
-let i = 1;
-while(i<101){
-    document.write(i + ' ');
-    i++;
-}
-
-let cars = ['bmw','audi','zaporozhets'];
-
-
-let arr =[];
-for(let i = 0; i < 100; i++){
-    arr.push(i)
-}
-arr.sort((a,b) =>  b - a )
-document.write(arr)
-
-
-let myCars = {
-    everyday: 'marshrutcka',
-    offroad: 'legs',
-    speed: 'taxi'
-}
-myCars['dream'] = 'impala';
-
-let counter = 0;
-for (let key in myCars){
-    counter++;
-}
-document.write(counter)
-*/
-
-function Car(name, color, year){
-    this.name = name;
-    this.color = color;
-    this.year = year;
-    this.sound = () => document.write(this.name + ': Chooh, chooh!');
-}
-let impala = new Car('impala', 'yellow','1967');
-impala.mark = 'chevrolet';
-
-document.write(impala.mark)
+fibo(lim);
