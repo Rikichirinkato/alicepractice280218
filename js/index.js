@@ -3,14 +3,15 @@
 const lim = parseInt(prompt('enter limit'));
 
 function fibo(lim){
-    let a = 1;
-    let b = a;
+    let first = 1;
+    let acum = first;
     let c;
     for(let i = 1; i < lim; i++){
-        c = a;
-        a = a + b;
-        b = c;
+        c = first;
+        first = first + acum;
+        acum = c;
     }
-    document.write(b)
+    document.write(acum)
 }
 fibo(lim);
+
